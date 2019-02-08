@@ -27,7 +27,7 @@ class DatasetFromDat(chainer.dataset.DatasetMixin):
             ymin = int(dat[5])
             xmax = xmin + int(dat[6])
             ymax = ymin + int(dat[7])
-            self._dat.append((img_path,label,xmin,ymin,xmax,ymax))
+            self._dat.append((img_path,label,ymin,xmin,ymax,xmax))
     
     def __len__(self):
         return len(self._dat)
